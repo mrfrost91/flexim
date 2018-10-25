@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, Serif;
     background-image: url(../img/back.jpg);
     background-color: #ccc;
     background-attachment: fixed;
@@ -16,6 +16,8 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    display: flex;
+    flex-direction: row;
 }
 header {
     color:  white;
@@ -25,6 +27,13 @@ header {
     background: url(../img/dota_logo.png) no-repeat left;
     background-size: contain;
     padding-left: 45px;
+}
+.forum {
+    color: white;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
 }
 h2 {
     text-align: center;
@@ -52,7 +61,6 @@ footer {
 .pole {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     background: #fff;
     border-radius: 10px;
     margin: 0px 0px 20px 0px;
