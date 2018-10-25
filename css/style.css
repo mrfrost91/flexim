@@ -1,60 +1,109 @@
 body {
-   margin: 0;
-   font-family: Arial, Helvetica, sans-serif;
-   background-image: url(../img/back.jpg);
-   background-color: #cccccc;
-   background-attachment: fixed;
- }
-
-.top-container {
-  background-color: #f1f1f1;
-  padding: 0px;
-  text-align: center;
+    margin: 0;
+    font-family: Arial;
+    background-image: url(../img/back.jpg);
+    background-color: #ccc;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-.header {
-  padding: 10px 16px;
-  background: #555;
-  color: #f1f1f1;
-  opacity: 0.85;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 102px;
+#top {
+    padding: 10px 16px;
+    background: #555;
+    color: #f1f1f1;
+    opacity: 0.85;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 header {
-  color:  white;
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: bold;
-  background: url(../img/dota_logo.png) no-repeat left;
-  background-size: contain;
-  padding-left: 45px;
-  background-image: url(../img/back.jpg) no-repeat center top;
+    color:  white;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    background: url(../img/dota_logo.png) no-repeat left;
+    background-size: contain;
+    padding-left: 45px;
 }
 h2 {
-  text-align: center;
+    text-align: center;
 }
-.content {
-  color: #fff;
-  padding: 16px;
-  background: #000;
-  margin: 50px auto;
-  width: 800px;
-  border-radius: 10px;
-  display: block;
+#first {
+    color: #fff;
+    padding: 20px;
+    background: #000;
+    width: 800px;
+    border-radius: 10px;
+    margin: 100px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
 }
 footer {
-  background: #555;
-  color: #f1f1f1;
-  opacity: 0.85;
-  text-align: center;
+    background: #555;
+    color: #f1f1f1;
+    opacity: 0.85;
+    width: 100%;
+    text-align: center;
 }
 .qw2 {
-  text-align: center;
+    text-align: center;
+}
+.pole {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 10px;
+    margin: 0px 0px 20px 0px;
+}
+.pole:first-of-type {
+    margin: 0px 0px 0px 0px;
+}
+.pole p {
+    color: #000;
+    padding: 0px 10px 0px 10px;
+
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.heroimg img {
+    border-radius: 10px;
+}
+.attr {
+    color: #000;
+}
+.attributes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.imgcontainer {
+    margin: 0px 0px 0px 20px;
+}
+.values {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.txtcontainer {
+    width: 100%;
+}
+.heroname {
+    width: 100%;
+}
+h3 {
+    color: #000;
+    text-align: center;
+}
+.values {
+    color: #000;
+    font-weight: bold;
+}
+.herotext p {
+    margin: 0px 10px 10px 10px;
+    color: #000;
 }
