@@ -16,5 +16,5 @@ function loadJson() {
         }
     };
     xhr.send();
-}
+};
 window.onload = loadJson;
