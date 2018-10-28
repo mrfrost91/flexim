@@ -9,30 +9,21 @@ function black() {
 }
 
 function toasty() {
-    const matchWord = (word, callback) => {
-        let matched = 0;
-        const onKeyPress = e => {
-            // convert the keycode to the character
-            const char = String.fromCharCode(e.which);
-            // check if the current character is the expected character
-            if (word.charAt(matched) === char) {
-                // move on to the next character
-                matched++
-            } else {
-                // reset the counter
-                matched = 0
-            }
-            if (matched === word.length) {
-                callback(e, word);
-                matched = 0
-            }
-        };
-        window.addEventListener('keypress', onKeyPress, true)
-    };
+    var word = "toasty";
+    var num_char = 0;
+    document.onkeypress = function match_char (e) {
+        var key_pressed = e.key;
+        if (key_pressed === word.charAt(num_char)) {
+            num_char++;
+        } else {
+            num_char = 0;
+        }
+        if (num_char === word.length) {
+            var snd = document.getElementsByTagName("audio")[1];
+            snd.play();
+        }
+    }
 
-    matchWord('toasty', (e, word) => {
-        var snd = document.getElementsByTagName("audio")[1];
-        snd.play();
-    })
 }
+
 window.onkeypress = toasty();
