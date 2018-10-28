@@ -21,6 +21,7 @@ function toasty() {
         if (num_char === word.length) {
             var snd = document.getElementsByTagName("audio")[1];
             snd.play();
+            num_char = 0;
         }
     }
 
