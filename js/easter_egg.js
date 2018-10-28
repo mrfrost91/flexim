@@ -1,11 +1,10 @@
 function black() {
     var snd = document.getElementsByTagName("audio")[0];
     snd.play();
-    var sf_text = document.getElementsByTagName("H3")[4].innerHTML;
-    document.getElementsByTagName("H3")[4].innerHTML = sf_text + ' Властелин';
-    document.getElementById("vlastelin").onclick = " ";
+    document.getElementsByTagName("H3")[4].innerText += " Властелин";
+    document.getElementById("vlastelin").removeAttribute("onclick");
     document.getElementsByClassName("values")[4].innerHTML = "<div>9999</div><div>9999</div><div>9999</div>";
-    document.getElementById('vlastelin').src = 'img/heroes/vlastelin.png';
+    document.getElementById('vlastelin').src = "img/heroes/vlastelin.png";
 }
 
 function toasty() {
