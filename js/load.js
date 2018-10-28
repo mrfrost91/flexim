@@ -6,15 +6,15 @@ function loadJson() {
 
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            var jsonText = JSON.parse(xhr.response);
-            var text="";
-            var i;
-            for (i=0; i < jsonText.length; ++i) {
-                text = "<h3>" + jsonText[i].id + ". " + jsonText[i].name + "</h3>";
-                document.getElementsByClassName("heroname")[i].innerHTML = text;
+            var jsonArray = JSON.parse(xhr.response);
+            var jsonText, jsonLength, i;
+            jsonLength = jsonArray.length;
+            for (i = 0; i < jsonLength; ++i) {
+                jsonText = "<h3>" + jsonArray[i].id + ". " + jsonArray[i].name + "</h3>";
+                document.getElementsByClassName("heroname")[i].innerHTML = jsonText;
             }
         }
     };
     xhr.send();
-};
+}
 window.onload = loadJson;

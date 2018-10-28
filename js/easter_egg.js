@@ -8,16 +8,16 @@ function black() {
 }
 
 function toasty() {
-    var word = "toasty";
+    var word = ["toasty", "ещфыен"];
     var num_char = 0;
-    document.onkeypress = function match_char (e) {
-        var key_pressed = e.key;
-        if (key_pressed === word.charAt(num_char)) {
+    document.onkeypress = function match_char(e) {
+        var key_char = e.key;
+        if (key_char === word[0].charAt(num_char) || (key_char === word[1].charAt(num_char))) {
             num_char++;
         } else {
             num_char = 0;
         }
-        if (num_char === word.length) {
+        if (num_char === word[0].length) {
             var snd = document.getElementsByTagName("audio")[1];
             snd.play();
             num_char = 0;
