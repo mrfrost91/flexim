@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 #top {
     padding: 10px 16px;
     background: #555;
@@ -16,11 +17,13 @@ body {
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
 }
+
 header {
-    color:  white;
+    color: white;
     text-transform: uppercase;
     font-size: 30px;
     font-weight: bold;
@@ -28,6 +31,7 @@ header {
     background-size: contain;
     padding-left: 45px;
 }
+
 .forum {
     color: white;
     text-transform: capitalize;
@@ -35,9 +39,11 @@ header {
     font-weight: bold;
     padding-left: 20px;
 }
+
 h2 {
     text-align: center;
 }
+
 #first {
     color: #fff;
     padding: 20px;
@@ -48,6 +54,7 @@ h2 {
     display: flex;
     flex-direction: column;
 }
+
 footer {
     background: #555;
     color: #f1f1f1;
@@ -55,9 +62,11 @@ footer {
     width: 100%;
     text-align: center;
 }
+
 .qw2 {
     text-align: center;
 }
+
 .pole {
     display: flex;
     flex-direction: column;
@@ -65,53 +74,59 @@ footer {
     border-radius: 10px;
     margin: 0px 0px 20px 0px;
 }
+
 .pole:first-of-type {
     margin: 0px 0px 0px 0px;
 }
-.pole p {
+
+.pole > p {
     color: #000;
     padding: 0px 10px 0px 10px;
 
 }
+
 .container {
     display: flex;
     flex-direction: row;
 }
+
 .heroimg img {
     border-radius: 10px;
 }
-.attr {
-    color: #000;
-}
-.attributes {
+
+.attrimg {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+
 .imgcontainer {
     margin: 0px 0px 0px 20px;
 }
+
 .values {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 10px;
+    color: #000;
+    font-weight: bold;
 }
+
 .txtcontainer {
     width: 100%;
 }
+
 .heroname {
     width: 100%;
 }
+
 h3 {
     color: #000;
     text-align: center;
 }
-.values {
-    color: #000;
-    font-weight: bold;
-}
+
 .herotext p {
-    margin: 0px 10px 10px 10px;
+    margin: 0px 20px 10px 15px;
     color: #000;
 }
