@@ -7,11 +7,11 @@ function loadJson(url) {
             if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
                 resolve(xhr.response);
             } else {
-                reject(Error('Data didn\'t load successfully; error code:' + xhr.statusText));
+                reject(Error("Data didn't load successfully; error code:" + xhr.statusText));
             }
         };
         xhr.onerror = function () {
-            reject(Error('There was a network error.'));
+            reject(Error("There was a network error."));
         };
         xhr.send();
     });
@@ -22,7 +22,7 @@ loadJson("http://127.0.0.1:8080/items/").then(function(response) {
     var jsonText, jsonLength, i;
     jsonLength = jsonArray.length;
     for (i = 0; i < jsonLength; ++i) {
-        jsonText = "<h3>" + jsonArray[i].id + ". " + jsonArray[i].name + "</h3>";
+        jsonText = "<h3>" + jsonArray[i].number + ". " + jsonArray[i].name + "</h3>";
         heroName[i].innerHTML = jsonText;
     }
 }, function(Error) {
