@@ -4,8 +4,12 @@ function black() {
     snd[0].play();
     document.getElementsByTagName("H3")[4].innerText += " Властелин";
     document.getElementById("vlastelin").removeAttribute("onclick");
-    document.getElementsByClassName("values")[4].innerHTML = "<div>9999</div><div>9999</div><div>9999</div>";
     document.getElementById("vlastelin").src = "img/heroes/vlastelin.png";
+    var valuesSf = document.getElementsByClassName("attrrow")[4].getElementsByClassName("value");
+    var i;
+    for (i = 0; i < 3; i++) {
+        valuesSf[i].innerText = "9999";
+    }
 }
 
 function toasty() {
