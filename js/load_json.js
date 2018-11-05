@@ -16,6 +16,7 @@ function loadJson(url) {
         xhr.send();
     });
 }
+
 var heroName = document.getElementsByClassName("heroname");
 loadJson("http://127.0.0.1:8080/items/").then(function(response) {
     var jsonArray = JSON.parse(response);

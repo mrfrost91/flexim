@@ -6,6 +6,7 @@ window.onscroll = function showMoveTop() {
         move_up.style = "display: none;";
     }
 };
+
 function moveTop() {
     window.scrollTo(0, 0);
 }

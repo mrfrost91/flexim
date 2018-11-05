@@ -1,9 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url(../img/back.jpg);
-    background-color: #ccc;
-    background-attachment: fixed;
+    background: #ccc url(../img/back.jpg) fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,6 +18,10 @@ body {
     left: 0;
     display: flex;
     flex-direction: row;
+}
+#top a {
+    font-size: 30px;
+    align-items: center;
 }
 #top:hover {
     opacity: 1;
@@ -44,14 +46,12 @@ a {
 
 header {
     text-transform: uppercase;
-    font-size: 30px;
     font-weight: bold;
     padding-left: 5px;
 }
 
 .forum {
     text-transform: capitalize;
-    font-size: 30px;
     font-weight: bold;
     padding-left: 20px;
 }
@@ -62,11 +62,11 @@ h2 {
 
 #first {
     color: #fff;
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px 0 20px;
     background: #000;
     max-width: 800px;
     border-radius: 10px;
-    margin: 100px 0px 30px 0px;
+    margin: 100px 0 30px 0;
     display: flex;
     flex-direction: column;
 }
@@ -88,16 +88,16 @@ footer {
     flex-direction: column;
     background: #fff;
     border-radius: 10px;
-    margin: 0px 0px 20px 0px;
+    margin: 0 0 20px 0;
 }
 
 .pole:first-of-type {
-    margin: 0px 0px 0px 0px;
+    margin: 0 0 0 0;
 }
 
 .pole > p {
     color: #000;
-    padding: 0px 10px 0px 10px;
+    padding: 0 10px 0 10px;
 
 }
 
@@ -135,7 +135,7 @@ footer {
 }
 
 .imgcontainer {
-    margin: 0px 0px 0px 20px;
+    margin: 0 0 0 20px;
 }
 
 .value {
@@ -160,7 +160,7 @@ h3 {
 }
 
 .herotext p {
-    margin: 0px 20px 10px 15px;
+    margin: 0 20px 10px 15px;
     color: #000;
 }
 #button_move_up {
@@ -185,9 +185,24 @@ h3 {
     font-size: 30px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-device-width: 800px) {
     .container {
         flex-direction: column;
+    }
+    #top {
+        height: 75px;
+    }
+    #top a {
+        align-items: center;
+        font-size: 3em;
+    }
+    .dokalogo img {
+        height: 72px;
+        width:  72px;
+    }
+    #first {
+        max-width: 100%;
+        margin: 120px 0 30px 0;
     }
     .imgcontainer {
         margin: 0;
@@ -195,5 +210,43 @@ h3 {
     .heroimg {
         justify-content: center;
     }
+    #button_move_up {
+        top: 100px;
+        height: 100px;
+        width: 100px;
+    }
+    #button_move_up > div {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+    .value {
+        font-size: 2em;
+    }
+    footer {
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
 
+    #top a {
+        align-items: center;
+    }
+
+    #first {
+        max-width: 100%;
+        margin: 120px 0 30px 0;
+    }
+
+    .imgcontainer {
+        margin: 0;
+    }
+
+    .heroimg {
+        justify-content: center;
+    }
 }
