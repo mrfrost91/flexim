@@ -3,8 +3,6 @@ html, body {
     font-family: Arial, sans-serif;
     background: #ccc url(../img/back.jpg) fixed;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     height: auto;
     padding: 0;
@@ -52,6 +50,7 @@ header:hover {
 .headercontent {
     display: flex;
     flex-direction: row;
+    background: inherit;
     width: 840px;
     height: 54px;
     align-items: center;
@@ -69,28 +68,36 @@ header:hover {
     height: 34px;
 }
 
-.icons a:nth-child(1) {
+.loginicon {
     background: #c42a0f;
+    height: inherit;
 }
 
-.icons a:nth-child(2) {
+.searchicon {
     background: #0f66c4;
+    height: inherit;
 }
 
 .logincontainer {
     position: fixed;
     height: auto;
     width: 300px;
-    background: #c42a0f;
-    margin: 104px 0 0 -192px;
+    background: inherit;
+    border-radius: 0 0 5px 5px;
+    margin: -155px 0 0 -192px;
+    z-index: -1;
+    transition: margin 0.3s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .searchcontainer {
     position: fixed;
     height: auto;
     width: 300px;
-    background: #0f66c4;
-    margin: 51px 0 0 -192px;
+    background: inherit;
+    border-radius: 0 0 5px 5px;
+    margin: -49px 0 0 -246px;
+    z-index: -1;
+    transition: margin 0.3s cubic-bezier(0.4, 0, 1, 1);
 }
 
 #page {
@@ -99,7 +106,7 @@ header:hover {
 }
 
 .dokalogo {
-    height: 100%;
+    height: inherit;
     align-items: center;
     padding: 0 10px 0 10px;
 }
@@ -125,7 +132,7 @@ header:hover {
     text-transform: capitalize;
     font-weight: bold;
     padding: 0 10px 0 10px;
-    height: 100%;
+    height: inherit;
     align-items: center;
     cursor: pointer;
 }

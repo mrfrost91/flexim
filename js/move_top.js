@@ -11,34 +11,32 @@ function mouseOut() {
     logoimg.src = "img/dota_logo.png";
 }
 
-var loginIcon = document.getElementsByClassName("icons")[0].getElementsByTagName("a")[0];
+var loginIcon = document.getElementsByClassName("loginicon")[0].getElementsByTagName("a")[0];
 var loginForm = document.getElementsByClassName("logincontainer")[0];
-var searchIcon = document.getElementsByClassName("icons")[0].getElementsByTagName("a")[1];
+var searchIcon = document.getElementsByClassName("searchicon")[0].getElementsByTagName("a")[0];
 var searchForm = document.getElementsByClassName("searchcontainer")[0];
 var n = 0;
 var i = 0;
 loginIcon.onclick = function () {
     if (n % 2 === 0) {
-        loginForm.style = "display: block";
-        searchForm.style = "display: none";
+        loginForm.style = "margin: 0 0 0 -192px;";
+        searchForm.style = "margin: -49px 0 0 -246px;";
         n++;
         i = 0;
-        console.log(n);
     } else {
-        loginForm.style = "display: none";
+        loginForm.style = "margin: -155px 0 0 -192px;";
         n = 0;
     }
 };
 
 searchIcon.onclick = function () {
     if (i % 2 === 0) {
-        searchForm.style = "display: block";
-        loginForm.style = "display: none";
+        searchForm.style = "margin: 0 0 0 -246px;";
+        loginForm.style = "margin: -155px 0 0 -192px;";
         i++;
         n = 0;
-        console.log(i);
     } else {
-        searchForm.style = "display: none";
+        searchForm.style = "margin: -49px 0 0 -246px;";
         i = 0;
     }
 };
