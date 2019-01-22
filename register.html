@@ -11,15 +11,26 @@
 <div id="page">
     <header>
         <div class="headercontent">
-            <a class="dokalogo" href="heroes.html">
+            <a class="dokalogo" href="index.html">
                 <img id="logoimg" src="img/dota_logo.png">
                 <div class="logotext">doka 2 trade</div>
             </a>
             <nav>
-                <a class="navtext" href="heroes.html">новости</a>
-                <a class="navtext" href="heroes.html">статьи</a>
-                <a class="navtext" href="heroes.html">обзоры</a>
-                <a class="navtext" href="heroes.html">форум</a>
+                <ul>
+                    <li>
+                        <a class="navtext" href="index.html">новости</a>
+                    </li>
+                    <li>
+                        <a class="navtext" href="index.html">статьи</a>
+                    </li>
+
+                    <li>
+                        <a class="navtext" href="index.html">обзоры</a>
+                    </li>
+                    <li>
+                        <a class="navtext" href="index.html">форум</a>
+                    </li>
+                </ul>
             </nav>
             <div class="icons">
                 <div class="loginicon">
@@ -27,12 +38,14 @@
                         <img src="img/login3.png">
                     </a>
                     <div class="logincontainer" style="display: block;">
-                        <form id="loginform" method="post" action="http://127.0.0.1:8080/login">
+                        <form id="loginform" method="post" action="http://127.0.0.1:8080/register">
+                            <input type="text" name="firstname" placeholder="Имя" id="firstname">
+                            <input type="text" name="lastname" placeholder="Фамилия" id="lastname">
                             <input type="text" name="username" placeholder="Логин" id="login">
                             <input type="password" name="password" placeholder="Пароль" id="pass">
-                            <input type="submit" value="Войти" style="cursor: pointer;">
+                            <input type="password" name="password2" placeholder="Повторите пароль" id="pass2">
+                            <input type="submit" value="Зарегистрироваться" style="cursor: pointer;">
                             <div style="display: flex; justify-content: center;">
-                                <a href="register.html" style="color: initial; cursor: pointer; text-decoration: underline;">Зарегистрироваться.</a>
                             </div>
                         </form>
                     </div>
@@ -577,7 +590,9 @@
     </audio>
     <script src="js/load_json.js"></script>
     <script src="js/easter_eggs.js"></script>
-    <script src="js/move_top.js"></script>
+    <script src="js/scrollTopButton.js"></script>
+    <script src="js/highlightLogo.js"></script>
+    <script src="js/loginRegisterExpand.js"></script>
 </div>
 </body>
 </html>
